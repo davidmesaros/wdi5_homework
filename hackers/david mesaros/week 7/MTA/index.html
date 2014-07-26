@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>MTA JS</title>
+</head>
+<body>
+ 
+    <div id='container'>
+<form >
+
+<p>
+  <div id="depart_label">
+  <label for="start_user_line"><strong>Departure Line:</strong></label>
+  <select name="start_user_line">
+    <% $lines.keys.each do |start_user_line| %>
+      <option value="<%= start_user_line %>"><%= start_user_line %></option>
+    <%end %>
+  </select>
+  </div>
+</p>
+<p>
+ <label for="user_start"><strong>Departure Station: </strong></label>
+  <select name="user_start" id="user_start" >
+    
+  </select>
+</p>
+<p>
+  <label for="end_user_line"><strong>Arrival Line:</strong></label>
+  <select name="end_user_line">
+    <% $lines.keys.each do |end_user_line| %>
+      <option value="<%= end_user_line %>"><%= end_user_line %></option>
+    <%end %>
+  </select>
+</p>
+<p>
+ <label for="user_end"><strong>Arrival Station: </strong></label>
+  <select name="user_end" id="arrival_station">
+
+  </select>
+</p>
+
+<p>
+  <button id="submitbutton" type="submit">Submit that shizzat</button>
+</p>
+
+</form>
+  
+  </div>
+  <script src='js/jquery.js'></script>
+   <script type="text/javascript" src="js/mta.js"></script>
+  
+</body>
+</html>
